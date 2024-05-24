@@ -1,0 +1,22 @@
+{
+  "name": "demotest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test -g Login"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12",
+    "allure-playwright": "^2.15.1"
+  },
+  "dependencies": {
+    "allure": "^0.0.0",
+    "allure-commandline": "^2.29.0",
+    "playwright": "^1.44.1"
+  }
+}
