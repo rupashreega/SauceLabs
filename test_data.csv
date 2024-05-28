@@ -1,0 +1,2 @@
+username,password,shoppingList,firstname,lastname,postalcode,removeitemfromcart,removeitemfromcheckout
+standard_user,secret_sauce,“Sauce Labs Backpack,Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt,MRF Bat",Florida,JunoBeach,33408,Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt

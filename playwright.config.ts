@@ -1,6 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-const { test, expect } = require('@playwright/test');
-const allure = require('allure-commandline');
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -21,7 +20,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html'],['allure-playwright']],
+  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -29,9 +28,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    screenshot: { mode: 'only-on-failure' }
   },
-  
+
   /* Configure projects for major browsers */
   projects: [
     {
@@ -76,5 +74,4 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-  
 });
