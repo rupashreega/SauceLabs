@@ -1,0 +1,14 @@
+32.39
+Error: Value less than $20.
+    at C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\tests\testregression.spec.ts:79:17
+    at C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\workerMain.js:336:9
+    at C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\testInfo.js:297:11
+    at TimeoutManager.withRunnable (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\timeoutManager.js:53:14)
+    at TestInfoImpl._runAsStage (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\testInfo.js:295:7)
+    at C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\workerMain.js:328:7
+    at C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\testInfo.js:297:11
+    at TimeoutManager.withRunnable (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\timeoutManager.js:41:27)
+    at TestInfoImpl._runAsStage (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\testInfo.js:295:7)
+    at WorkerMain._runTest (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\workerMain.js:278:5)
+    at WorkerMain.runTestGroup (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\worker\workerMain.js:202:11)
+    at process.<anonymous> (C:\Users\Surface Laptop\OneDrive\Documents\GitHub\SauceLabs\node_modules\playwright\lib\common\process.js:94:22)

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test -g Login"
+    "test": "npx playwright test -g Login --headed --project=chromium"
   },
   "keywords": [],
   "author": "",

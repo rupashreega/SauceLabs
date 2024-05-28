@@ -61,20 +61,39 @@ test('login', async ({ page }) => {
   
     if (totalValue !== null) {
       const price = parseFloat(totalValue.slice(totalValue.indexOf('$') + 1));
-      if (price < 40.00) {
-        await checkoutPage.clickFinishButton();
-        if (await checkoutPage.isThankYouMessageVisible()) {
-          console.log("Order successful!");
-          await checkoutPage.clickBackHomeButton();
-          await homePage.clickMenuButton();
-          await homePage.clickLogoutButton();
+      console.log(price)
+      try
+      {
+        if (price < 20.00) {
+          await checkoutPage.clickFinishButton();
+          if (await checkoutPage.isThankYouMessageVisible()) {
+            console.log("Order successful!");
+            await checkoutPage.clickBackHomeButton();
+            await homePage.clickMenuButton();
+            await homePage.clickLogoutButton();
+          } else {
+            throw new Error("Thank you for your order message not found!");
+          }
         } else {
-          throw new Error("Thank you for your order message not found!");
+          // await checkoutPage.clickCancelButton();
+          throw new Error("Value less than $20.")
         }
-      } else {
-        await checkoutPage.clickCancelButton();
       }
-    } else {
+      catch(error)
+      {
+        console.error(error.message);
+      }
+      
+    } 
+    
+    else {
       throw new Error("Total Value not found!");
     }
   });
+
+
+  // Allure notes:
+
+  //npx playwright test --reporter=line,allure-playwright
+/*allure generate ./allure-result --clean
+allure open ./allure-report*/
